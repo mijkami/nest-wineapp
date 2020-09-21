@@ -12,21 +12,14 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const typeorm_1 = require("@nestjs/typeorm");
 const todo_module_1 = require("./todo/todo.module");
-const todo_entity_1 = require("./todo/todo.entity");
+const database_connection_service_1 = require("./database/database-connection/database-connection.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
         imports: [
-            typeorm_1.TypeOrmModule.forRoot({
-                type: "postgres",
-                host: "localhost",
-                port: 5432,
-                username: "postgres",
-                password: "postgres",
-                database: "postgres",
-                entities: [todo_entity_1.TodoEntity],
-                synchronize: true
+            typeorm_1.TypeOrmModule.forRootAsync({
+                useClass: database_connection_service_1.DatabaseConnectionService
             }),
             todo_module_1.TodoModule
         ],

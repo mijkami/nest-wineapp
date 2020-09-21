@@ -4,19 +4,13 @@ import { AppService } from './app.service';
 import {TypeOrmModule} from "@nestjs/typeorm";
 import { TodoModule } from './todo/todo.module';
 import {TodoEntity} from "./todo/todo.entity";
+import {DatabaseConnectionService} from "./database/database-connection/database-connection.service";
 
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: "postgres",
-      host: "localhost",
-      port: 5432,
-      username: "postgres",
-      password: "postgres",
-      database: "postgres",
-      entities: [TodoEntity],
-      synchronize: true
+    TypeOrmModule.forRootAsync({
+      useClass: DatabaseConnectionService
     }),
     TodoModule
   ],
