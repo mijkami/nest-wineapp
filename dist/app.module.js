@@ -10,11 +10,26 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
+const typeorm_1 = require("@nestjs/typeorm");
+const todo_module_1 = require("./todo/todo.module");
+const todo_entity_1 = require("./todo/todo.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [],
+        imports: [
+            typeorm_1.TypeOrmModule.forRoot({
+                type: "postgres",
+                host: "localhost",
+                port: 5432,
+                username: "postgres",
+                password: "postgres",
+                database: "postgres",
+                entities: [todo_entity_1.TodoEntity],
+                synchronize: true
+            }),
+            todo_module_1.TodoModule
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
