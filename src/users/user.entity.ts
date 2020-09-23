@@ -1,5 +1,5 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import {Option} from "../option.entity";
+import {OptionEntity} from "../option.entity";
 
 @Entity()
 export class User {

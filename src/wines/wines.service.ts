@@ -1,20 +1,21 @@
-import { Injectable } from '@nestjs/common';
+import {HttpException, HttpStatus, Injectable} from '@nestjs/common';
 import {InjectRepository} from "@nestjs/typeorm";
 import {Repository} from "typeorm";
-import {Wine} from "./wine.entity";
+import {WineEntity} from "./wine.entity";
+import CreateWineDto from "../dto/create-wine.dto";
 
 @Injectable()
 export class WinesService {
   constructor(
-    @InjectRepository(Wine)
-    private wineRepository: Repository<Wine>,
+    @InjectRepository(WineEntity)
+    private wineRepository: Repository<WineEntity>,
   ) {}
 
-  findAll(): Promise<Wine[]> {
+  findAll(): Promise<WineEntity[]> {
     return this.wineRepository.find();
   }
 
-  findOne(id: string): Promise<Wine> {
+  findOne(id: string): Promise<WineEntity> {
     return this.wineRepository.findOne(id);
   }
 
@@ -22,7 +23,34 @@ export class WinesService {
     await this.wineRepository.delete(id);
   }
 
-  async insertOne(wine: Wine): Promise<Wine> {
-    return await this.wineRepository.save(wine);
+  async updateOne(wineDetails: CreateWineDto): Promise<WineEntity> {
+    const wineEntity: WineEntity = WineEntity.create();
+    const {name} = wineDetails;
+    wineEntity.wine_name = name.toLowerCase();
+
+    const wineElm = await WineEntity.findOne({
+      wine_name: name.toLowerCase()
+    });
+    await WineEntity.save(wineEntity);
+    return wineEntity;
+  }
+
+  async insertOne(wineDetails: CreateWineDto): Promise<WineEntity> {
+    const wineEntity: WineEntity = WineEntity.create();
+    const {name} = wineDetails;
+    wineEntity.wine_name = name.toLowerCase();
+
+    const wineElm = await WineEntity.findOne({
+      wine_name: name.toLowerCase()
+    });
+
+    if (wineElm == undefined) {
+      await WineEntity.save(wineEntity);
+      return wineEntity;
+    }
+    throw new HttpException({
+      status: HttpStatus.CONFLICT,
+      error: "Element already exists in the database"
+    }, HttpStatus.CONFLICT);
   }
 }

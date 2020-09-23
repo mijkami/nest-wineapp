@@ -2487,32 +2487,37 @@
         "affectsGlobalScope": false
       },
       "../src/option-values.entity.ts": {
-        "version": "57b609eb2d70b3ae738f3c1f3a5c0d48efae159d2fd5262d8736b56055d116b8",
-        "signature": "fb8947a93808591d03dac4dcfb5ce28b2bcd0d98ff507c3f0b7eeec8be668049",
+        "version": "6d9a575a26cdde6f16bdc4d996556df0fbac5dbbfcc6aeb3f9e74d854fb8939e",
+        "signature": "39ed8129685ce6eef5ee3a908b49d0007059ba683d680c0f35150ba3646972e0",
         "affectsGlobalScope": false
       },
       "../src/option.entity.ts": {
-        "version": "05d0470f40ad622692f954e4d01735203fb5791968e7c53b880c115dae7991bd",
-        "signature": "ba28b3ecd7db9fc16c08cc5b32c3bbc888e7dda565d26a15d2046fddb1490bac",
+        "version": "6e31a2575b54a6b7b7aee8b7f7632d8d9d2f289c26c3f6ca78cfb1050e91ff3b",
+        "signature": "9ad32afcc32d074d104060b74539166b2b966bbf92bef77c7cd06863e4a9dcce",
         "affectsGlobalScope": false
       },
       "../src/wines/wine.entity.ts": {
-        "version": "b619da15ee9ffd9ebbf1d5a0cd207b75160d32033368fe053121360258292b00",
-        "signature": "94e55fe400309a1d58df09e63386cd07c5271f81bfae73c10c5ff0300d101774",
+        "version": "c50f1b4e829d67b1e41fd8364c58b6fe9abf19eb337d9e7d53031d0ff6b80e8d",
+        "signature": "8399bdc0f6169d8752d7ef6affbf5f03f6b618d24f9dcb01a8ff0009a07e7041",
+        "affectsGlobalScope": false
+      },
+      "../src/dto/create-wine.dto.ts": {
+        "version": "2290f4057b65e8e78ed3931e0c5f2834544c0dae3e40be56e5858faf9e76be0f",
+        "signature": "f43eb8354c0ea41c3991a8bca7082d10bb0ce2af19fbf62ede7a4813bba22540",
         "affectsGlobalScope": false
       },
       "../src/wines/wines.service.ts": {
-        "version": "29e2a39455fde2439cb9841a4f5602e7f49dd079fae71baaf63499209f50e338",
-        "signature": "2b9b0585733a9f025eb779bb60acff6d835b1aca57258d0e58cbaa240786c9c1",
+        "version": "9af7e5626c27c23c4cf8532e533f16bf023450c54b60181000e55aa3d402bc15",
+        "signature": "e3ebec75b42a171192984b67b8f2808b039a06cdb339f3af464789769191b20f",
         "affectsGlobalScope": false
       },
       "../src/wines/wines.controller.ts": {
-        "version": "140b4dcd078f2de849bf92f7e7a7d870e09f537abd1a7681169f5040b0148e49",
-        "signature": "9dbbccae09894291401b0ca0722ae625e21eb5523f37a62e6ae42c8e1f461562",
+        "version": "0d38662213ce02d43dd45e0f0487cdd2166f01c987c70354fe415d48b11a1b94",
+        "signature": "604199f63cd2f7a1ed57626fd1f9486af92195bce1c60b95bfecfe100ef2c005",
         "affectsGlobalScope": false
       },
       "../src/wines/wines.module.ts": {
-        "version": "415643b570a8d1d7cba05599bddc823f1c11c080e1caafcef320b2222c9992d2",
+        "version": "a5cc8452554eae207c0394a9c66d179d4388af66859e8995c0d45e950c4e3b37",
         "signature": "b34882159c80f5524c82a0c5b713b1b7f9cc6c37c8d99b733bada393f1c545cc",
         "affectsGlobalScope": false
       },
@@ -2706,8 +2711,18 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
+      "../src/dto/create-option.dto.ts": {
+        "version": "29f45997655b27310f2e114e1c8482deef06ae547c4fe3b0ded2747f5ceda67d",
+        "signature": "f3dfd4cb3a71497893068c682fed4a3e51e6ca7ac18b56da2559a3d83480e52d",
+        "affectsGlobalScope": false
+      },
+      "../src/dto/create-option_values.dto.ts": {
+        "version": "70a87568dd811ca2c3c1915f97be827ce02317179dce74a94d4ca5195e71f6f7",
+        "signature": "5b7c27e0b601ddee872b1736ed205d67ab4acc9528579ac8e42e4ceac5535118",
+        "affectsGlobalScope": false
+      },
       "../src/users/user.entity.ts": {
-        "version": "803e6204317ad498a6ce20546ee392c8aa5f9cac4585a58ff4f4d1bff3cec014",
+        "version": "505afe2a4323439b8fecf164a3f990378dba89783b4c09e8758cc9dcd49ecea6",
         "signature": "a19a3e616b7fd42ca4a9f5ab79c7453986ad3688e2281a4ef57e206cda24a33b",
         "affectsGlobalScope": false
       },
@@ -11055,6 +11070,27 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "../src/dto/create-option.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "../src/dto/create-option_values.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "../src/dto/create-wine.dto.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -11070,7 +11106,8 @@
         "../node_modules/@types/node/ts3.1/util.d.ts",
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
-        "../node_modules/typeorm/index.d.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/option.entity.ts"
       ],
       "../src/option.entity.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -11079,7 +11116,8 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/option-values.entity.ts"
+        "../src/option-values.entity.ts",
+        "../src/wines/wine.entity.ts"
       ],
       "../src/users/user.entity.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -11132,7 +11170,7 @@
         "../node_modules/@types/node/ts3.1/util.d.ts",
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
-        "../src/wines/wine.entity.ts",
+        "../src/dto/create-wine.dto.ts",
         "../src/wines/wines.service.ts"
       ],
       "../src/wines/wines.module.ts": [
@@ -11156,6 +11194,7 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../node_modules/typeorm/index.d.ts",
+        "../src/dto/create-wine.dto.ts",
         "../src/wines/wine.entity.ts"
       ]
     },
@@ -18321,15 +18360,27 @@
       "../src/app.controller.ts": [
         "../src/app.service.ts"
       ],
+      "../src/option-values.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/option.entity.ts"
+      ],
       "../src/option.entity.ts": [
-        "../src/option-values.entity.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/option-values.entity.ts",
+        "../src/wines/wine.entity.ts"
+      ],
+      "../src/wines/wine.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/option.entity.ts"
       ],
       "../src/wines/wines.controller.ts": [
+        "../src/dto/create-wine.dto.ts",
         "../src/wines/wine.entity.ts",
         "../src/wines/wines.service.ts"
       ],
       "../src/wines/wines.service.ts": [
         "../node_modules/typeorm/index.d.ts",
+        "../src/dto/create-wine.dto.ts",
         "../src/wines/wine.entity.ts"
       ]
     },

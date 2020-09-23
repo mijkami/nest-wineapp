@@ -1,8 +1,9 @@
-import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import {OptionValues} from "./option-values.entity";
+import {BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {OptionValuesEntity} from "./option-values.entity";
+import {WineEntity} from "./wines/wine.entity";
 
 @Entity()
-export class Option {
+export class OptionEntity extends BaseEntity{
 
   @PrimaryGeneratedColumn()
   option_id: number
@@ -10,10 +11,10 @@ export class Option {
   @Column()
   option_name: string
 
-  @Column()
-  wine_id: number
+  @ManyToOne(type => WineEntity, wine => wine.options)
+  wine: WineEntity;
 
-  @OneToMany(type => OptionValues, optionValues => optionValues.value_id, {cascade: ['insert']})
-  optionValues: OptionValues[];
+  @OneToMany(type => OptionValuesEntity, optionValue => optionValue.option)
+  optionValues: OptionValuesEntity[];
 
 }

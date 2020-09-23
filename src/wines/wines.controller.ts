@@ -1,6 +1,6 @@
-import {Body, Controller, Get, Post} from '@nestjs/common';
+import {Body, Controller, Get, Post, Put} from '@nestjs/common';
 import {WinesService} from "./wines.service";
-import {Wine} from "./wine.entity";
+import CreateWineDto from "../dto/create-wine.dto";
 
 @Controller('wines')
 export class WinesController {
@@ -11,8 +11,13 @@ export class WinesController {
     return this.winesService.findAll();
   }
 
-  @Post("/insert")
-  createWine(@Body() wine: Wine) {
+  @Post()
+  createWine(@Body() wine: CreateWineDto) {
     return this.winesService.insertOne(wine);
+  }
+
+  @Put()
+  updateWine(@Body() wine: CreateWineDto) {
+    return this.winesService.updateOne(wine);
   }
 }

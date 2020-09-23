@@ -1,7 +1,8 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
+import {BaseEntity, Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
+import {OptionEntity} from "./option.entity";
 
 @Entity()
-export class OptionValues {
+export class OptionValuesEntity extends BaseEntity {
 
   @PrimaryGeneratedColumn()
   value_id: number
@@ -12,10 +13,7 @@ export class OptionValues {
   @Column()
   value_add_info: string
 
-  @Column()
-  wine_id: number
-
-  @Column()
-  option_id: number
+  @ManyToOne(type => OptionEntity, option => option.optionValues)
+  option: OptionEntity;
 
 }
