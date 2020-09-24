@@ -1,4 +1,5 @@
 import { Controller, Request, Post, UseGuards, Get } from '@nestjs/common';
+import { getRepository } from 'typeorm';
 import { AuthService } from './auth/auth.service';
 import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { LocalAuthGuard } from './auth/local-auth.gard';
@@ -18,4 +19,8 @@ export class AppController {
   getProfile(@Request() req) {
     return req.user;
   }
+
+  // @UseGuards(JwtAuthGuard)
+  // @Post('user/create')
+
 }
