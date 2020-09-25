@@ -18,10 +18,9 @@ export class UsersService {
     return this.UserModel.find().exec();
   }
 
-
-  async findOne(name: string): Promise<User | undefined> {
+  async findOne(username: string): Promise<User | undefined> {
     const user = await this.UserModel
-      .findOne({name: name})
+      .findOne({username: username})
       .exec();
     if (user) return user;
     return undefined;
