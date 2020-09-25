@@ -2817,8 +2817,8 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.service.ts": {
-        "version": "716328cad86ad4aa0548cd02c9c65e9ca0505afcaa9aaf2090373de6a5259f8c",
-        "signature": "74e416e04c0d9114d9cf8886da1543b99ee892440a1472d48bcdc89c0b0c574b",
+        "version": "7764d041c943a67a6a7cd45e9415d8464c35be7877df365a27a2a56e337ab9bf",
+        "signature": "aba55b8d33705fdbec23c81258cd4901f564920e69603b277533374cfe6f1960",
         "affectsGlobalScope": false
       },
       "../src/auth/auth.service.ts": {
@@ -3007,8 +3007,8 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.controller.ts": {
-        "version": "6293b211baa30b0456dd573443b2e6519655f357efd9b5347f3e6b2e4e0e3f61",
-        "signature": "8510439889863a9b951ea0736777ee76ec4183b8d6e428550b4c4269f36cb0d2",
+        "version": "c64f7b1890ae3374d46891aa1761dcb9a2fc3279580a7f1492f3083df61b92d2",
+        "signature": "f84bd53cff72aecc7c55a32062e97707e13942f5d199097354c1ef31a892368a",
         "affectsGlobalScope": false
       },
       "../src/users/users.module.ts": {
