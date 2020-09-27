@@ -1,17 +1,22 @@
+import { Injectable, Logger } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { UsersInterface } from 'src/interfaces/users.interface';
+import { Users } from 'src/schemas/users.schema';
 
-import { Injectable } from '@nestjs/common';
-import {UsersInterface} from "../interfaces/users.interface";
-import {InjectModel} from "@nestjs/mongoose";
-import {Model} from "mongoose";
 
 
 @Injectable()
 export class UsersService {
-  constructor(@InjectModel('Users') private usersModel: Model<UsersInterface>) {
-  }
+  // here I'm not 100% sure but I think it's easier to explicitly type
+  constructor(@InjectModel(Users.name) private readonly usersModel: Model<Users>) {}
 
   async findOne(username: string): Promise<UsersInterface | undefined> {
-    console.log(username);
-    return this.usersModel.findOne({username: username});
+    Logger.debug(username, UsersService.name)
+    // here use .lean() to return a plain JavaScript object instead of a mongoose object
+    // see: https://stackoverflow.com/questions/60525544/how-to-serialize-a-nest-js-response-with-class-transformer-while-getting-data-wi
+    const user = await this.usersModel.findOne({username}).lean();
+    Logger.debug(user, UsersService.name)
+    return user
   }
 }
