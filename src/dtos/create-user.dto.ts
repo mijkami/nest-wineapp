@@ -1,14 +1,13 @@
 import {ApiModelProperty} from "@nestjs/swagger/dist/decorators/api-model-property.decorator";
 import {UserRole} from "../enums";
 import {IsNotEmpty} from "class-validator";
+import {Unique} from "typeorm";
 
 export class CreateUserDto {
-  @ApiModelProperty()
-  readonly _id: number;
 
   @ApiModelProperty()
   @IsNotEmpty()
-  readonly name: string;
+  readonly username: string;
 
   @ApiModelProperty({enum: [UserRole]})
   @IsNotEmpty()
@@ -16,7 +15,7 @@ export class CreateUserDto {
 
   @ApiModelProperty()
   @IsNotEmpty()
-  readonly pass: string;
+  readonly password: string;
 
   @ApiModelProperty()
   @IsNotEmpty()
