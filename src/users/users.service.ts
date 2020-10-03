@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import {HttpException, HttpStatus, Injectable, Logger} from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { UsersInterface } from 'src/interfaces/users.interface';
@@ -21,6 +21,12 @@ export class UsersService {
 
   async addUser(user: CreateUserDto): Promise<UsersInterface> {
     const createdUser = new this.usersModel(user);
+    const userExists = this.usersModel
+      .find({username: user.username})
+      .select('_id')
+      .lean();
+    if (userExists)
+    console.log(userExists);
     return createdUser.save();
   }
 }

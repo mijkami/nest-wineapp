@@ -1612,13 +1612,8 @@
         "affectsGlobalScope": false
       },
       "../src/interfaces/users.interface.ts": {
-        "version": "f5537bf4dc018304023eb8e7d5e9bf928bc36dee9c3ed2c4665853bba3b42f1d",
-        "signature": "c21f23389fd20fa8b113f0a6128bcb7a07dec7edf72ef26ccb4dbe25c28b04fe",
-        "affectsGlobalScope": false
-      },
-      "../src/schemas/users.schema.ts": {
-        "version": "76122564e7d9a44b73a1990a01262009dd24cc2113596821a8c86cd3780fab0d",
-        "signature": "409c668d774c7d4996da72967fd7914f6f9e5ada63e12553af2df6c0824ceb63",
+        "version": "cdc9d5bdf4060a60035a65a3add1b8e92527247f1cfa727781d3c8ac81434e9f",
+        "signature": "1869ec78bd97328ba92cad593947fd1b43c9263242fe5f8d96181b435d744bf5",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": {
@@ -1806,13 +1801,23 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
       },
+      "../src/schemas/users.schema.ts": {
+        "version": "15d6d4c45394c05b0ca498f2a09886ac8f67c825a1a03723874f06372b5677b8",
+        "signature": "c39b8848398f91d5febbe2449f96aba1c2484a1f237ad1ae6a3fbf137a229548",
+        "affectsGlobalScope": false
+      },
+      "../src/enums.ts": {
+        "version": "ea4b99285ef6fed758168c29e772739b798122ff317fb22519e9e960967bd6f7",
+        "signature": "05150913d9c951e546a37693bd14e46c851b5e42db2e1e4e223c53d747f6660c",
+        "affectsGlobalScope": false
+      },
       "../src/dtos/users-create.dto.ts": {
-        "version": "ba47df6a69064cc5d6445c31d796e59bd203a89171da8ce7a51723c017cc2f47",
-        "signature": "bafe5176dbc6e47b8c21c4dc66f6da0f866e2546ff68986e20043a26df1da56f",
+        "version": "8187ca7e960dd1a3008f9c005536265321864e7b80f9f56ab095bc984ec43770",
+        "signature": "155f1d8d05f2dc2c90e1c9538ab6272c5424963ceb928ee698ed72d016e36aee",
         "affectsGlobalScope": false
       },
       "../src/users/users.service.ts": {
-        "version": "3aa57e70a22d237d176508ec5d5ac9ad79c84e0891ef9b8d532d6ea832601a41",
+        "version": "86f8d0969c14d1e9971a43009ce14de879d0037023a72d63e46059f1675fb8de",
         "signature": "f22eb0d133721ad2cfb7a83fd362673c8b57664d1bec7906ac76b88d6b3b77c7",
         "affectsGlobalScope": false
       },
@@ -1939,6 +1944,11 @@
       "../src/products/products.module.ts": {
         "version": "3eae4e99c79d76942e213c5eac22f1513e7fff6a11c00708dd897f808a79be31",
         "signature": "8857a2a959eb0ee870d0adb812e0d41a0e12796ec0c1d85f8416e82bcf51ca03",
+        "affectsGlobalScope": false
+      },
+      "../src/app.module.ts": {
+        "version": "edc9d978fdd058730091251c93d73fe9c2ccc46f01541772b71db528413e21f1",
+        "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -2119,16 +2129,6 @@
       "../node_modules/@nestjs/core/index.d.ts": {
         "version": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d",
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d",
-        "affectsGlobalScope": false
-      },
-      "../src/app.module.ts": {
-        "version": "5be3830fabdbc4f7e938656d39375dd6f38e5908e698223749b90205fea0bdea",
-        "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
-        "affectsGlobalScope": false
-      },
-      "../src/enums.ts": {
-        "version": "4eff3e6f56cf999c4414837810f53b76f068dec776c66565a4bca5eb8080f125",
-        "signature": "15513aa6ae6dc19d69b9bff7fc22c5973b855601ad817cea9ebb2420b4ae70e8",
         "affectsGlobalScope": false
       },
       "../src/main.ts": {
@@ -8249,7 +8249,6 @@
       ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -8355,7 +8354,8 @@
         "../node_modules/@types/node/ts3.1/fs.d.ts",
         "../node_modules/@types/node/ts3.1/util.d.ts",
         "../node_modules/@types/node/ts3.4/fs.d.ts",
-        "../node_modules/@types/node/ts3.4/util.d.ts"
+        "../node_modules/@types/node/ts3.4/util.d.ts",
+        "../src/enums.ts"
       ],
       "../src/enums.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -8438,6 +8438,7 @@
       ],
       "../src/schemas/users.schema.ts": [
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@nestjs/swagger/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
         "../node_modules/@types/node/ts3.1/fs.d.ts",
