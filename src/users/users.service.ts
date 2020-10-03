@@ -21,12 +21,6 @@ export class UsersService {
 
   async addUser(user: CreateUserDto): Promise<UsersInterface> {
     const createdUser = new this.usersModel(user);
-    const userExists = this.usersModel
-      .find({username: user.username})
-      .select('_id')
-      .lean();
-    if (userExists)
-    console.log(userExists);
     return createdUser.save();
   }
 }

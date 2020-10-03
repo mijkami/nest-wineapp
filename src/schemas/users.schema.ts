@@ -7,7 +7,7 @@ import {ApiProperty} from "@nestjs/swagger";
 // here implement interface required
 @Schema()
 export class Users extends Document implements UsersInterface {
-  @Prop()
+  @Prop( { unique: true, autoIndex: true })
   username: string;
 
   @Prop()
