@@ -1612,8 +1612,8 @@
         "affectsGlobalScope": false
       },
       "../src/interfaces/users.interface.ts": {
-        "version": "cdc9d5bdf4060a60035a65a3add1b8e92527247f1cfa727781d3c8ac81434e9f",
-        "signature": "1869ec78bd97328ba92cad593947fd1b43c9263242fe5f8d96181b435d744bf5",
+        "version": "c4b3bc54166e077191c46062dbe6d893bc8e7e96599d21fe00ee9f35aab5c0ef",
+        "signature": "d15d99aabe50985abb458697022f7426f4fcb086a0f1487b50b607cc72f59aa5",
         "affectsGlobalScope": false
       },
       "../node_modules/@nestjs/swagger/dist/decorators/api-basic.decorator.d.ts": {
@@ -1802,8 +1802,8 @@
         "affectsGlobalScope": false
       },
       "../src/schemas/users.schema.ts": {
-        "version": "e09d2d40798c44bfccc8d7b004e082e30288c9e3b96697876aba833dfdbaebd3",
-        "signature": "c39b8848398f91d5febbe2449f96aba1c2484a1f237ad1ae6a3fbf137a229548",
+        "version": "7f22ae65f4399812c5a817b0defb537351dbbbfac4f03b8398115390a7195e99",
+        "signature": "960a7a4a5e9d8d5970d51435997cf5851dc89f589c04b43a41783869ef28f6c2",
         "affectsGlobalScope": false
       },
       "../src/enums.ts": {
@@ -1812,13 +1812,28 @@
         "affectsGlobalScope": false
       },
       "../src/dtos/users-create.dto.ts": {
-        "version": "8187ca7e960dd1a3008f9c005536265321864e7b80f9f56ab095bc984ec43770",
-        "signature": "155f1d8d05f2dc2c90e1c9538ab6272c5424963ceb928ee698ed72d016e36aee",
+        "version": "1a342a5a5068946a68abc97a0336e9acc7b79197bd9dfa132e52ecc3037e5fdd",
+        "signature": "b03b0959d6693ac248df0e301987e2e259ffefd4a8b86ce73fc25246540adf9d",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/bcrypt/index.d.ts": {
+        "version": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
+        "signature": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
+        "affectsGlobalScope": false
+      },
+      "../src/interfaces/user-profile.interface.ts": {
+        "version": "da98c9327c19df0fa30cac8aaf5e4e878e65328e88cad56fca17e88e5f2d48b5",
+        "signature": "d7740263f087221ca93ff4f49805cf5e42a011dc3f2bb5e90d89c203d1061be4",
+        "affectsGlobalScope": false
+      },
+      "../src/schemas/users-no-pass.schema.ts": {
+        "version": "e9564c2bdfebc2873c9d7ffc5f2d87c6efe4d8852ac12da2ae3962706008c119",
+        "signature": "6a1cbb24807280ecc29a2bd7d1e7214621562956f9f9b41a0ab3d1c459119138",
         "affectsGlobalScope": false
       },
       "../src/users/users.service.ts": {
-        "version": "23d496de8d2b59ee26584ddc11d64dd2cf395a83b4fe26beb3a1654c455bb843",
-        "signature": "f22eb0d133721ad2cfb7a83fd362673c8b57664d1bec7906ac76b88d6b3b77c7",
+        "version": "1142643f2a0ce7f37811a826dd2e324460322f6b9a96e998d4d7f8e66a8a0bbf",
+        "signature": "a23f14896be0efa46e221bfd27434ff0ddba2f5cbbedcb05f22361fa66cb868a",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/jsonwebtoken/index.d.ts": {
@@ -1857,7 +1872,7 @@
         "affectsGlobalScope": false
       },
       "../src/auth/auth.service.ts": {
-        "version": "418ba187bd1051792ac43d907f580a58e9f3405d0b8476eeb766da7d65226d61",
+        "version": "c88fe51b3bbdab8f4ef3c42a17dfacf0e85592bfdf12a53586ed132d92e06f81",
         "signature": "c259b2338648eedd4c55374737f2edb6e15f8b4f87ae118253010f530a5f6337",
         "affectsGlobalScope": false
       },
@@ -1877,12 +1892,12 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.controller.ts": {
-        "version": "3daa67544ea45fda55f601cdb8789a6c3298e4c3a63650d86f533eade3a6da76",
-        "signature": "75e69c3899c1e39d0bd06a553e4f71f1427b2ee55ff083a092428b1c48938b1b",
+        "version": "07b56ff6fefd1158148a4730842ba59d325050625bc2f4148c4abd5f34c5b252",
+        "signature": "26120cc3ed701f415a8508a048c75d5f1a6dbd966588dbba00e5d31fd226942d",
         "affectsGlobalScope": false
       },
       "../src/users/users.module.ts": {
-        "version": "bf2faea0ff724d8277505f4902ff8ef57b070f6242e0946486918ea11d4f67bc",
+        "version": "5fbe311de6a78e897408ef8bb5f7cca1e2c0ee079a015f1e3462060402f08f09",
         "signature": "aa1725e38b5a0b4009f6a74f296f173e7926c119a60454dbd2e523861735df69",
         "affectsGlobalScope": false
       },
@@ -1937,7 +1952,7 @@
         "affectsGlobalScope": false
       },
       "../src/products/products.controller.ts": {
-        "version": "13aebe26e85146560cfe6e7f159dfe521c0502066c21284846d25b6775092d5a",
+        "version": "a6f93e1e9eccd1398008a0377265119e4d18248ed20a66ac6c7384ed5b9dcce2",
         "signature": "9d99367ccba2ae19ab0b5fe5b8d494eef528ea80daaf8a5d573d2c5da6775fd2",
         "affectsGlobalScope": false
       },
@@ -6492,6 +6507,13 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "../node_modules/@types/bcrypt/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "../node_modules/@types/body-parser/index.d.ts": [
         "../node_modules/@types/connect/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -8287,6 +8309,7 @@
       "../src/auth/auth.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/jwt/index.d.ts",
+        "../node_modules/@types/bcrypt/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/ts3.1/fs.d.ts",
         "../node_modules/@types/node/ts3.1/util.d.ts",
@@ -8372,6 +8395,13 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "../src/interfaces/user-profile.interface.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "../src/interfaces/users.interface.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -8436,6 +8466,16 @@
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../src/interfaces/products.interface.ts"
       ],
+      "../src/schemas/users-no-pass.schema.ts": [
+        "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts",
+        "../src/interfaces/user-profile.interface.ts"
+      ],
       "../src/schemas/users.schema.ts": [
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -8454,7 +8494,9 @@
         "../node_modules/@types/node/ts3.1/util.d.ts",
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
+        "../src/auth/jwt-auth.guard.ts",
         "../src/dtos/users-create.dto.ts",
+        "../src/interfaces/user-profile.interface.ts",
         "../src/users/users.service.ts"
       ],
       "../src/users/users.module.ts": [
@@ -8465,6 +8507,7 @@
         "../node_modules/@types/node/ts3.1/util.d.ts",
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
+        "../src/schemas/users-no-pass.schema.ts",
         "../src/schemas/users.schema.ts",
         "../src/users/users.controller.ts",
         "../src/users/users.service.ts"
@@ -8472,6 +8515,7 @@
       "../src/users/users.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/mongoose/index.d.ts",
+        "../node_modules/@types/bcrypt/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/mongoose/index.d.ts",
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -8479,7 +8523,9 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../src/dtos/users-create.dto.ts",
+        "../src/interfaces/user-profile.interface.ts",
         "../src/interfaces/users.interface.ts",
+        "../src/schemas/users-no-pass.schema.ts",
         "../src/schemas/users.schema.ts"
       ]
     },
@@ -11984,6 +12030,13 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "../node_modules/@types/bcrypt/index.d.ts": [
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "../node_modules/@types/body-parser/index.d.ts": [
         "../node_modules/@types/connect/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -13745,6 +13798,9 @@
         "../node_modules/@types/passport-local/index.d.ts",
         "../src/auth/auth.service.ts"
       ],
+      "../src/dtos/users-create.dto.ts": [
+        "../src/enums.ts"
+      ],
       "../src/interfaces/products.interface.ts": [
         "../node_modules/@types/mongoose/index.d.ts"
       ],
@@ -13762,19 +13818,26 @@
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/interfaces/products.interface.ts"
       ],
+      "../src/schemas/users-no-pass.schema.ts": [
+        "../node_modules/@types/mongoose/index.d.ts",
+        "../src/interfaces/user-profile.interface.ts"
+      ],
       "../src/schemas/users.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/interfaces/users.interface.ts"
       ],
       "../src/users/users.controller.ts": [
         "../src/dtos/users-create.dto.ts",
+        "../src/interfaces/user-profile.interface.ts",
         "../src/interfaces/users.interface.ts",
         "../src/users/users.service.ts"
       ],
       "../src/users/users.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/dtos/users-create.dto.ts",
+        "../src/interfaces/user-profile.interface.ts",
         "../src/interfaces/users.interface.ts",
+        "../src/schemas/users-no-pass.schema.ts",
         "../src/schemas/users.schema.ts"
       ]
     },

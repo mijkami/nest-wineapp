@@ -1,14 +1,18 @@
-import {HttpException, HttpStatus, Injectable, Logger} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { UsersInterface } from 'src/interfaces/users.interface';
 import { Users } from 'src/schemas/users.schema';
 import {CreateUserDto} from "../dtos/users-create.dto";
+import * as bcrypt from "bcrypt";
+import {UserProfileInterface} from "../interfaces/user-profile.interface";
+import {UsersNoPass} from "../schemas/users-no-pass.schema";
 
 @Injectable()
 export class UsersService {
   // here I'm not 100% sure but I think it's easier to explicitly type
-  constructor(@InjectModel(Users.name) private readonly usersModel: Model<Users>) {}
+  constructor(@InjectModel(Users.name) private readonly usersModel: Model<Users>,
+              @InjectModel(UsersNoPass.name) private readonly usersModelNoPass: Model<UsersNoPass>) {}
 
   async findOne(username: string): Promise<UsersInterface | undefined> {
     // Logger.debug(username, UsersService.name);
@@ -20,7 +24,20 @@ export class UsersService {
   }
 
   async addUser(user: CreateUserDto): Promise<UsersInterface> {
+    user.password = await bcrypt.hash(user.password, 10);
     const createdUser = new this.usersModel(user);
     return createdUser.save();
+  }
+
+  async getAllUsers() : Promise<UserProfileInterface[]> {
+    return await this.usersModel.find().exec();
+  }
+
+  async getOneUser(lastName: string) : Promise<UserProfileInterface> {
+    return this.usersModel.findOne({last_name: lastName}).exec();
+  }
+
+  async getUserById(id: string) : Promise<UserProfileInterface> {
+    return this.usersModel.findById(id).exec();
   }
 }

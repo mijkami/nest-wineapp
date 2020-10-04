@@ -1,17 +1,12 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import {Document} from 'mongoose';
-
-import { UsersInterface } from '../interfaces/users.interface';
-import {ApiProperty} from "@nestjs/swagger";
+import {UserProfileInterface} from "../interfaces/user-profile.interface";
 
 // here implement interface required
 @Schema()
-export class Users extends Document implements UsersInterface {
+export class UsersNoPass extends Document implements UserProfileInterface {
   @Prop( { unique: true, autoIndex: true })
   username: string;
-
-  @Prop()
-  password: string;
 
   @Prop()
   first_name: string;
@@ -30,4 +25,4 @@ export class Users extends Document implements UsersInterface {
 
 }
 
-export const UsersSchema = SchemaFactory.createForClass(Users);
+export const UsersNoPassSchema = SchemaFactory.createForClass(UsersNoPass);

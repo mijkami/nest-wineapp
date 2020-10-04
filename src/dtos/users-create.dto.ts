@@ -7,7 +7,7 @@ export class CreateUserDto {
   readonly username: string;
 
   @ApiProperty()
-  readonly password: string;
+  password: string;
 
   @ApiProperty()
   readonly first_name: string;
@@ -16,9 +16,12 @@ export class CreateUserDto {
   readonly last_name: string;
 
   @ApiProperty()
-  readonly roles : string[];
+  readonly roles : string[UserRole];
 
   @ApiProperty()
   readonly created_at: Date;
+
+  @ApiProperty()
+  readonly last_seen_at: Date;
 
 }
