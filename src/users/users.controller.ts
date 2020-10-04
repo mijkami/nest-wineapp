@@ -20,13 +20,14 @@ export class UsersController {
     return this.usersService.getAllUsers();
   }
 
-  @Post("/last_name")
-  async getOneUser(@Body() last_name): Promise<UserProfileInterface> {
+  @Get("/id/:_id")
+  async getUserById(@Param("_id") id: string): Promise<UserProfileInterface> {
+    return this.usersService.getUserById(id);
+  }
+
+  @Get("/last_name/:last_name")
+  async getOneUser(@Param("last_name") last_name): Promise<UserProfileInterface> {
     return this.usersService.getOneUser(last_name);
   }
 
-  @Post("/id")
-  async getUserById(@Body() id): Promise<UserProfileInterface> {
-    return this.usersService.getUserById(id);
-  }
 }

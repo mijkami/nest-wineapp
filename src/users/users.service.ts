@@ -33,8 +33,8 @@ export class UsersService {
     return await this.usersModel.find().exec();
   }
 
-  async getOneUser(lastName: string) : Promise<UserProfileInterface> {
-    return this.usersModel.findOne({last_name: lastName}).exec();
+  async getOneUser(last_name: string) : Promise<UserProfileInterface> {
+    return this.usersModel.findOne({last_name: last_name}).exec();
   }
 
   async getUserById(id: string) : Promise<UserProfileInterface> {
