@@ -6,13 +6,13 @@ import { Users } from 'src/schemas/users.schema';
 import {CreateUserDto} from "../dtos/users-create.dto";
 import * as bcrypt from "bcrypt";
 import {UserProfileInterface} from "../interfaces/user-profile.interface";
-import {UsersNoPass} from "../schemas/users-no-pass.schema";
+import {UpdateUserDto} from "../dtos/users-update.dto";
+import {UsersUpdate} from "../schemas/users-update.schema";
 
 @Injectable()
 export class UsersService {
   // here I'm not 100% sure but I think it's easier to explicitly type
-  constructor(@InjectModel(Users.name) private readonly usersModel: Model<Users>,
-              @InjectModel(UsersNoPass.name) private readonly usersModelNoPass: Model<UsersNoPass>) {}
+  constructor(@InjectModel(Users.name) private readonly usersModel: Model<Users>) {}
 
   async findOne(username: string): Promise<UsersInterface | undefined> {
     // Logger.debug(username, UsersService.name);
@@ -33,11 +33,19 @@ export class UsersService {
     return await this.usersModel.find().exec();
   }
 
-  async getOneUser(last_name: string) : Promise<UserProfileInterface> {
-    return this.usersModel.findOne({last_name: last_name}).exec();
+  async getOneUser(username: string) : Promise<UserProfileInterface> {
+      return this.usersModel.findOne({username: username}).exec();
   }
 
   async getUserById(id: string) : Promise<UserProfileInterface> {
     return this.usersModel.findById(id).exec();
+  }
+
+  async updateUser(id: string, updateUserDto: UpdateUserDto) : Promise<UserProfileInterface>  {
+    return this.usersModel.findByIdAndUpdate(id, updateUserDto);
+  }
+
+  async removeUser(id: string) : Promise<UserProfileInterface> {
+    return this.usersModel.findByIdAndDelete(id);
   }
 }
