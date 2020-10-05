@@ -1821,29 +1821,14 @@
         "signature": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
         "affectsGlobalScope": false
       },
-      "../src/interfaces/user-profile.interface.ts": {
-        "version": "da98c9327c19df0fa30cac8aaf5e4e878e65328e88cad56fca17e88e5f2d48b5",
-        "signature": "d7740263f087221ca93ff4f49805cf5e42a011dc3f2bb5e90d89c203d1061be4",
-        "affectsGlobalScope": false
-      },
       "../src/dtos/users-update.dto.ts": {
         "version": "53a2acedb2c75178c0f5dca65b2dde129f4b87b0cbe0e28273f094f55284293a",
         "signature": "7de2dd59fe88ea6e2d3c81f978fcf543faa091027f7f9645fb5d5bf63e98fd77",
         "affectsGlobalScope": false
       },
-      "../src/interfaces/users-update.interface.ts": {
-        "version": "5a0513e737c706c8696fced65d050ccb650b23e7a4d43c5e978591a9f501e9ab",
-        "signature": "45bcfd2c578d35bee085b887397ac529d98a82b2ae9c1c55ed9f9788f78db25c",
-        "affectsGlobalScope": false
-      },
-      "../src/schemas/users-update.schema.ts": {
-        "version": "33bd7d2e2affd7cfde88b00325e63351f4f24d9eb64bf21194e9f5d9f95103d5",
-        "signature": "e8b3818079ece3553467591a9b47cd658f5704fdd8a274e964495788fd751d45",
-        "affectsGlobalScope": false
-      },
       "../src/users/users.service.ts": {
-        "version": "bbeb5f37e287eb1d36ffe838726b2394a50c5a1269d74eaf200b7a588681975f",
-        "signature": "b118926f172ecb55c23caa81b7a7afc1829673d84271147e934f8d0b5cfea6e9",
+        "version": "038f4af69acea6d87c2fecddf1e9dce15fd6aae579b4fec5c461663f6aabeb17",
+        "signature": "41a39fc149d7d7a488303172bf10003295c092b0b9a7712c874b8468890c0acb",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/jsonwebtoken/index.d.ts": {
@@ -1902,17 +1887,12 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.controller.ts": {
-        "version": "40b81a305f04c7f88f383bdba64395329a6eaf546830688c835b8116261c37a7",
-        "signature": "30b3b4ffc8502544998e0c3f07f83ea7ddd9b05829286aeab66e5c6998bf22a7",
-        "affectsGlobalScope": false
-      },
-      "../src/schemas/users-no-pass.schema.ts": {
-        "version": "e9564c2bdfebc2873c9d7ffc5f2d87c6efe4d8852ac12da2ae3962706008c119",
-        "signature": "6a1cbb24807280ecc29a2bd7d1e7214621562956f9f9b41a0ab3d1c459119138",
+        "version": "21aa17034db7a99f186005c842f67d1a391bdab2c58345cc1355307efaece898",
+        "signature": "5f5adc5c2d64cfd9ea9e6e16239ef8a7ea59ee2767c11ce3f3ee5bb86dd784ef",
         "affectsGlobalScope": false
       },
       "../src/users/users.module.ts": {
-        "version": "48a020264b3dada7dba9a4d8e163932c8175ff2ece761895836fbd6ecc43c393",
+        "version": "bf2faea0ff724d8277505f4902ff8ef57b070f6242e0946486918ea11d4f67bc",
         "signature": "aa1725e38b5a0b4009f6a74f296f173e7926c119a60454dbd2e523861735df69",
         "affectsGlobalScope": false
       },
@@ -2164,6 +2144,16 @@
       "../src/main.ts": {
         "version": "79231a05414ab19949e461694540ba2eb0d16f8e2ae34d93481c4423a02c3b72",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
+        "affectsGlobalScope": false
+      },
+      "../src/interfaces/users-update.interface.ts": {
+        "version": "5a0513e737c706c8696fced65d050ccb650b23e7a4d43c5e978591a9f501e9ab",
+        "signature": "45bcfd2c578d35bee085b887397ac529d98a82b2ae9c1c55ed9f9788f78db25c",
+        "affectsGlobalScope": false
+      },
+      "../src/schemas/users-update.schema.ts": {
+        "version": "33bd7d2e2affd7cfde88b00325e63351f4f24d9eb64bf21194e9f5d9f95103d5",
+        "signature": "e8b3818079ece3553467591a9b47cd658f5704fdd8a274e964495788fd751d45",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -8418,13 +8408,6 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
-      "../src/interfaces/user-profile.interface.ts": [
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/ts3.1/fs.d.ts",
-        "../node_modules/@types/node/ts3.1/util.d.ts",
-        "../node_modules/@types/node/ts3.4/fs.d.ts",
-        "../node_modules/@types/node/ts3.4/util.d.ts"
-      ],
       "../src/interfaces/users-update.interface.ts": [
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/ts3.1/fs.d.ts",
@@ -8496,16 +8479,6 @@
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../src/interfaces/products.interface.ts"
       ],
-      "../src/schemas/users-no-pass.schema.ts": [
-        "../node_modules/@nestjs/mongoose/index.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/mongoose/index.d.ts",
-        "../node_modules/@types/node/ts3.1/fs.d.ts",
-        "../node_modules/@types/node/ts3.1/util.d.ts",
-        "../node_modules/@types/node/ts3.4/fs.d.ts",
-        "../node_modules/@types/node/ts3.4/util.d.ts",
-        "../src/interfaces/user-profile.interface.ts"
-      ],
       "../src/schemas/users-update.schema.ts": [
         "../node_modules/@nestjs/mongoose/index.d.ts",
         "../node_modules/@nestjs/swagger/index.d.ts",
@@ -8539,7 +8512,7 @@
         "../src/auth/jwt-auth.guard.ts",
         "../src/dtos/users-create.dto.ts",
         "../src/dtos/users-update.dto.ts",
-        "../src/interfaces/user-profile.interface.ts",
+        "../src/interfaces/users.interface.ts",
         "../src/users/users.service.ts"
       ],
       "../src/users/users.module.ts": [
@@ -8550,8 +8523,6 @@
         "../node_modules/@types/node/ts3.1/util.d.ts",
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
-        "../src/schemas/users-no-pass.schema.ts",
-        "../src/schemas/users-update.schema.ts",
         "../src/schemas/users.schema.ts",
         "../src/users/users.controller.ts",
         "../src/users/users.service.ts"
@@ -8568,9 +8539,7 @@
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../src/dtos/users-create.dto.ts",
         "../src/dtos/users-update.dto.ts",
-        "../src/interfaces/user-profile.interface.ts",
         "../src/interfaces/users.interface.ts",
-        "../src/schemas/users-update.schema.ts",
         "../src/schemas/users.schema.ts"
       ]
     },
@@ -13860,10 +13829,6 @@
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/interfaces/products.interface.ts"
       ],
-      "../src/schemas/users-no-pass.schema.ts": [
-        "../node_modules/@types/mongoose/index.d.ts",
-        "../src/interfaces/user-profile.interface.ts"
-      ],
       "../src/schemas/users-update.schema.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/interfaces/users-update.interface.ts"
@@ -13875,7 +13840,6 @@
       "../src/users/users.controller.ts": [
         "../src/dtos/users-create.dto.ts",
         "../src/dtos/users-update.dto.ts",
-        "../src/interfaces/user-profile.interface.ts",
         "../src/interfaces/users.interface.ts",
         "../src/users/users.service.ts"
       ],
@@ -13883,7 +13847,6 @@
         "../node_modules/@types/mongoose/index.d.ts",
         "../src/dtos/users-create.dto.ts",
         "../src/dtos/users-update.dto.ts",
-        "../src/interfaces/user-profile.interface.ts",
         "../src/interfaces/users.interface.ts",
         "../src/schemas/users.schema.ts"
       ]
@@ -14476,7 +14439,6 @@
       "../src/dtos/users-update.dto.ts",
       "../src/enums.ts",
       "../src/interfaces/products.interface.ts",
-      "../src/interfaces/user-profile.interface.ts",
       "../src/interfaces/users-update.interface.ts",
       "../src/interfaces/users.interface.ts",
       "../src/main.ts",
@@ -14484,7 +14446,6 @@
       "../src/products/products.module.ts",
       "../src/products/products.service.ts",
       "../src/schemas/products.schema.ts",
-      "../src/schemas/users-no-pass.schema.ts",
       "../src/schemas/users-update.schema.ts",
       "../src/schemas/users.schema.ts",
       "../src/users/users.controller.ts",

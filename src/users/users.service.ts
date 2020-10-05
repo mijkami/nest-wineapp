@@ -5,9 +5,7 @@ import { UsersInterface } from 'src/interfaces/users.interface';
 import { Users } from 'src/schemas/users.schema';
 import {CreateUserDto} from "../dtos/users-create.dto";
 import * as bcrypt from "bcrypt";
-import {UserProfileInterface} from "../interfaces/user-profile.interface";
 import {UpdateUserDto} from "../dtos/users-update.dto";
-import {UsersUpdate} from "../schemas/users-update.schema";
 
 @Injectable()
 export class UsersService {
@@ -29,23 +27,23 @@ export class UsersService {
     return createdUser.save();
   }
 
-  async getAllUsers() : Promise<UserProfileInterface[]> {
+  async getAllUsers() : Promise<UsersInterface[]> {
     return await this.usersModel.find().exec();
   }
 
-  async getOneUser(username: string) : Promise<UserProfileInterface> {
+  async getOneUser(username: string) : Promise<UsersInterface> {
       return this.usersModel.findOne({username: username}).exec();
   }
 
-  async getUserById(id: string) : Promise<UserProfileInterface> {
+  async getUserById(id: string) : Promise<UsersInterface> {
     return this.usersModel.findById(id).exec();
   }
 
-  async updateUser(id: string, updateUserDto: UpdateUserDto) : Promise<UserProfileInterface>  {
+  async updateUser(id: string, updateUserDto: UpdateUserDto) : Promise<UsersInterface>  {
     return this.usersModel.findByIdAndUpdate(id, updateUserDto);
   }
 
-  async removeUser(id: string) : Promise<UserProfileInterface> {
+  async removeUser(id: string) : Promise<UsersInterface> {
     return this.usersModel.findByIdAndDelete(id);
   }
 }
