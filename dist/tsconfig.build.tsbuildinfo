@@ -2127,13 +2127,13 @@
         "affectsGlobalScope": false
       },
       "../src/products/products.service.ts": {
-        "version": "1d2f23d45fb1a8c6704f4478caacac0c0f625eeabd4942ab02abcade98447581",
-        "signature": "087af97fd18181e6704363a136caa126044b4f6a148deec12217e3a216ce7eb8",
+        "version": "6c4fa7f13fe7dc054649727d34e1adb7fbb8813327bea59f545697d630fa6de1",
+        "signature": "ac744ccda1492f7e43405c04481b40853c2d6279ca49292435ef9f24e8436996",
         "affectsGlobalScope": false
       },
       "../src/products/products.controller.ts": {
-        "version": "a6f93e1e9eccd1398008a0377265119e4d18248ed20a66ac6c7384ed5b9dcce2",
-        "signature": "9d99367ccba2ae19ab0b5fe5b8d494eef528ea80daaf8a5d573d2c5da6775fd2",
+        "version": "2dbeea01974d5a1a35318364d69fd6a489fed4752310e3b63bf3af183f7dd945",
+        "signature": "5dacc3adf184fa9387809d6259afddc415f247b14224cbc4e80e4bc6ce16e698",
         "affectsGlobalScope": false
       },
       "../src/products/products.module.ts": {
@@ -8482,7 +8482,9 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../src/auth/jwt-auth.guard.ts",
+        "../src/decorators/roles.decorator.ts",
         "../src/dtos/products-create.dto.ts",
+        "../src/guards/auth.guard.ts",
         "../src/products/products.service.ts"
       ],
       "../src/products/products.module.ts": [

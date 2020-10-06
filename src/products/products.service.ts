@@ -45,6 +45,16 @@ export class ProductsService {
     }
   }
 
+  async updateQteProduct(id: string, productQte: number) {
+    return this.productModel.findByIdAndUpdate(id, {
+      quantity: productQte
+    });
+  }
+
+  async updateProduct(id: string, updateProductDto: CreateProductDto) {
+    return this.productModel.findByIdAndUpdate(id, updateProductDto);
+  }
+
   async removeProduct(id: string) {
     return this.productModel.findByIdAndDelete(id);
   }
