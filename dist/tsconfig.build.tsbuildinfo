@@ -1872,7 +1872,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.controller.ts": {
-        "version": "9dbb729c67d413b5286cb15776701e290ccf3ea8eae5d8b893f6aca9b8f324b0",
+        "version": "3dd4924fd1523c7b71d5f0d7641d2ed2d1d1b7e7f271a52ad2e3912b0a091026",
         "signature": "be4bcc9ebd472cf866df7c4a0c14d73eb2da7d128d4b9b488c3de46fd4ff02ea",
         "affectsGlobalScope": false
       },
@@ -2072,7 +2072,7 @@
         "affectsGlobalScope": false
       },
       "../src/users/users.controller.ts": {
-        "version": "a8f7b2c6be166b037a3bda1bd1ab270722fc20bd7c7f7aba0af023cbb52fd1b4",
+        "version": "8076dd4f185ca3e65c9d664f1b04b00e87314f3b4728fbce229a2a9441f5296c",
         "signature": "5f5adc5c2d64cfd9ea9e6e16239ef8a7ea59ee2767c11ce3f3ee5bb86dd784ef",
         "affectsGlobalScope": false
       },
@@ -2112,28 +2112,38 @@
         "affectsGlobalScope": false
       },
       "../src/dtos/products-create.dto.ts": {
-        "version": "094bd459b06f72e5fedbbf61f8850bc17c8166288b9ead807ebfdb57ecd37661",
-        "signature": "56e7912ba6c3c40222b35d955f578ebee7d678ca31d2f080d289b01184cfa82f",
+        "version": "55557c43857239c458c98d025af14cdf4f22e53b656ecc07e2d9799d0da0153c",
+        "signature": "9f42f9cc60be487e5c94043f9a705aace8ac2d8928c090edf9631bd57b9c23e4",
         "affectsGlobalScope": false
       },
       "../src/interfaces/products.interface.ts": {
-        "version": "dc2cf258e6620e157faab05f8a111ef99d1cb95b91d032b2ad300b17a78006bc",
-        "signature": "95ec6f10e8d9f6257742a5132965f22ccd41e2b9c61b0a86b548c7d39013101f",
+        "version": "d1464fa8250cd0698466ad19001e501929c4978c4c0cc2d5bc4903f9fd8e334a",
+        "signature": "f6bef51a41662e9246e0e9816eda9121caf4854ec7f56791628ff979bb83edec",
         "affectsGlobalScope": false
       },
       "../src/schemas/products.schema.ts": {
-        "version": "d2b8c6101efa783a74b597a0f9666132a6712d236986057d6eeaebfd5edf7952",
-        "signature": "07fa37e1bcf48722ff1c889b01437ccdc890c591d588f3d365825bbe71ddcbba",
+        "version": "746d1393e35116c2d7d9c62159a82cdb84eea7f89c2ebd81513eae6f3c12805b",
+        "signature": "6629783f1e86f5e7c0828e2a2f9b4c232d2f5b79a530c8b5b6449de7200bc1bf",
+        "affectsGlobalScope": false
+      },
+      "../src/dtos/product-update-qte.dto.ts": {
+        "version": "7bd5df12db043c3cbddce886481e9dc8685841903337be74d702c0d7009e3ade",
+        "signature": "d25927ae8a6787e360db914e96491c3f5d348a25992775072dc24160092fb080",
+        "affectsGlobalScope": false
+      },
+      "../src/dtos/product-hold.dto.ts": {
+        "version": "7f403618e3400863979927d785e23c56c6f674de838eb913db8407230d771165",
+        "signature": "06cb4bef111007019d40d777753b2c926654c9a134944bdc077fe78fe05dc12f",
         "affectsGlobalScope": false
       },
       "../src/products/products.service.ts": {
-        "version": "6c4fa7f13fe7dc054649727d34e1adb7fbb8813327bea59f545697d630fa6de1",
-        "signature": "ac744ccda1492f7e43405c04481b40853c2d6279ca49292435ef9f24e8436996",
+        "version": "1c1c2113a9640027c0a35ff4d2139d957c316affd6a34b3ec08ab4816b15ed53",
+        "signature": "033acf82f8e5be41741e8ee699c3afcb4440a79ef629de1e431dbde130e51c96",
         "affectsGlobalScope": false
       },
       "../src/products/products.controller.ts": {
-        "version": "2dbeea01974d5a1a35318364d69fd6a489fed4752310e3b63bf3af183f7dd945",
-        "signature": "5dacc3adf184fa9387809d6259afddc415f247b14224cbc4e80e4bc6ce16e698",
+        "version": "5228deffbbea5bfa0858182fe15446fa84a449937aaa76f1f27e5bf48ffda502",
+        "signature": "8bfaadf28d46e6114786890a18365c684b2cac77d2f24eb2a5c561108a83113e",
         "affectsGlobalScope": false
       },
       "../src/products/products.module.ts": {
@@ -8290,6 +8300,7 @@
       ],
       "../src/app.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/swagger/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/ts3.1/fs.d.ts",
         "../node_modules/@types/node/ts3.1/util.d.ts",
@@ -8401,6 +8412,22 @@
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts"
       ],
+      "../src/dtos/product-hold.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
+      "../src/dtos/product-update-qte.dto.ts": [
+        "../node_modules/@nestjs/swagger/index.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/ts3.1/fs.d.ts",
+        "../node_modules/@types/node/ts3.1/util.d.ts",
+        "../node_modules/@types/node/ts3.4/fs.d.ts",
+        "../node_modules/@types/node/ts3.4/util.d.ts"
+      ],
       "../src/dtos/products-create.dto.ts": [
         "../node_modules/@nestjs/swagger/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -8483,6 +8510,8 @@
         "../node_modules/@types/node/ts3.4/util.d.ts",
         "../src/auth/jwt-auth.guard.ts",
         "../src/decorators/roles.decorator.ts",
+        "../src/dtos/product-hold.dto.ts",
+        "../src/dtos/product-update-qte.dto.ts",
         "../src/dtos/products-create.dto.ts",
         "../src/guards/auth.guard.ts",
         "../src/products/products.service.ts"
@@ -8508,6 +8537,8 @@
         "../node_modules/@types/node/ts3.1/util.d.ts",
         "../node_modules/@types/node/ts3.4/fs.d.ts",
         "../node_modules/@types/node/ts3.4/util.d.ts",
+        "../src/dtos/product-hold.dto.ts",
+        "../src/dtos/product-update-qte.dto.ts",
         "../src/dtos/products-create.dto.ts",
         "../src/interfaces/products.interface.ts",
         "../src/schemas/products.schema.ts"
@@ -8547,6 +8578,7 @@
       ],
       "../src/users/users.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/swagger/index.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/ts3.1/fs.d.ts",
         "../node_modules/@types/node/ts3.1/util.d.ts",
@@ -13878,12 +13910,16 @@
         "../node_modules/@types/mongoose/index.d.ts"
       ],
       "../src/products/products.controller.ts": [
+        "../src/dtos/product-hold.dto.ts",
+        "../src/dtos/product-update-qte.dto.ts",
         "../src/dtos/products-create.dto.ts",
         "../src/interfaces/products.interface.ts",
         "../src/products/products.service.ts"
       ],
       "../src/products/products.service.ts": [
         "../node_modules/@types/mongoose/index.d.ts",
+        "../src/dtos/product-hold.dto.ts",
+        "../src/dtos/product-update-qte.dto.ts",
         "../src/dtos/products-create.dto.ts",
         "../src/interfaces/products.interface.ts"
       ],
@@ -14498,6 +14534,8 @@
       "../src/auth/local-auth.guard.ts",
       "../src/auth/local.strategy.ts",
       "../src/decorators/roles.decorator.ts",
+      "../src/dtos/product-hold.dto.ts",
+      "../src/dtos/product-update-qte.dto.ts",
       "../src/dtos/products-create.dto.ts",
       "../src/dtos/users-create.dto.ts",
       "../src/dtos/users-update.dto.ts",

@@ -4,6 +4,8 @@ import {Products} from "../schemas/products.schema";
 import {InjectModel} from "@nestjs/mongoose";
 import {ProductsInterface} from "../interfaces/products.interface";
 import {Model} from "mongoose";
+import {UpdateProductQteDto} from "../dtos/product-update-qte.dto";
+import {HoldProductDto} from "../dtos/product-hold.dto";
 
 @Injectable()
 export class ProductsService {
@@ -23,6 +25,18 @@ export class ProductsService {
         error: 'Ce produit n\'existe pas'
       }, HttpStatus.NO_CONTENT);
     }
+  }
+
+  async holdOneProduct(id: string, holdProduct: HoldProductDto): Promise<CreateProductDto | string> {
+    let canHold = false;
+    await this.productModel.findById(id, (err, product) => {
+      if(product.quantity > holdProduct.hold) {
+        canHold = true;
+      }
+    })
+    return canHold
+      ? this.productModel.findByIdAndUpdate(id, holdProduct)
+      : "Nombre de bouteilles à garder plus important que le nombre total de bouteilles" ;
   }
 
   async addProduct(createProductDto: CreateProductDto) {
@@ -45,10 +59,8 @@ export class ProductsService {
     }
   }
 
-  async updateQteProduct(id: string, productQte: number) {
-    return this.productModel.findByIdAndUpdate(id, {
-      quantity: productQte
-    });
+  async updateQteProduct(id: string, productQte: UpdateProductQteDto) {
+    return this.productModel.findByIdAndUpdate(id, productQte);
   }
 
   async updateProduct(id: string, updateProductDto: CreateProductDto) {

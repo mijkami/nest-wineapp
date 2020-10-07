@@ -17,6 +17,7 @@ const common_1 = require("@nestjs/common");
 const local_auth_guard_1 = require("./auth/local-auth.guard");
 const auth_service_1 = require("./auth/auth.service");
 const jwt_auth_guard_1 = require("./auth/jwt-auth.guard");
+const swagger_1 = require("@nestjs/swagger");
 let AppController = class AppController {
     constructor(authService) {
         this.authService = authService;
@@ -29,6 +30,7 @@ let AppController = class AppController {
     }
 };
 __decorate([
+    swagger_1.ApiOperation({ summary: 'Login with username and password' }),
     common_1.UseGuards(local_auth_guard_1.LocalAuthGuard),
     common_1.Post('auth/login'),
     __param(0, common_1.Request()),
@@ -37,6 +39,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "login", null);
 __decorate([
+    swagger_1.ApiOperation({ summary: 'Get profile of one user' }),
     common_1.UseGuards(jwt_auth_guard_1.JwtAuthGuard),
     common_1.Get('profile'),
     __param(0, common_1.Request()),
@@ -45,6 +48,8 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "getProfile", null);
 AppController = __decorate([
+    swagger_1.ApiBearerAuth(),
+    swagger_1.ApiTags('Authentication'),
     common_1.Controller(),
     __metadata("design:paramtypes", [auth_service_1.AuthService])
 ], AppController);

@@ -33,6 +33,9 @@ export class Products extends Document implements ProductsInterface {
   quantity: number;
 
   @Prop()
+  hold: number;
+
+  @Prop()
   active : boolean;
 
 }

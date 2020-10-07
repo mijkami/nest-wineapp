@@ -30,5 +30,8 @@ export class CreateProductDto {
   readonly quantity: number;
 
   @ApiProperty()
+  readonly hold : number;
+
+  @ApiProperty()
   readonly active : boolean;
 }

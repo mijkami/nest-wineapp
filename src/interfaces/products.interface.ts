@@ -10,5 +10,6 @@ export class ProductsInterface extends Document {
   readonly buy_price_ht : number;
   readonly sell_price_ht : number;
   readonly quantity: number;
+  readonly hold : number
   readonly active : boolean;
 }
