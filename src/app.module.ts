@@ -1,12 +1,19 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConfigModule } from '@nestjs/config';
+import {MongooseModule} from "@nestjs/mongoose";
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+import { ProductsModule } from './products/products.module';
 
 
 @Module({
-  imports: [ConfigModule.forRoot()],
+  imports: [
+    MongooseModule.forRoot('mongodb+srv://WineApp:wineapp@wineapp.cjilz.mongodb.net/WineApp?authSource=admin&replicaSet=atlas-awua6g-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true'),
+    AuthModule,
+    UsersModule,
+    ProductsModule,
+  ],
   controllers: [AppController],
-  providers: [AppService],
-})
+  providers: [AppService]})
 export class AppModule {}
