@@ -10,7 +10,7 @@ import {MulterModule} from "@nestjs/platform-express";
     // here use variable as it avoids mistyping errors
     MongooseModule.forFeature([{name: Products.name, schema: ProductsSchema}]),
     MulterModule.register({
-      dest: './assets/img',
+      dest: './bottleImages',
     })
   ],
   providers: [ProductsService],
