@@ -1,4 +1,15 @@
-import {Body, Controller, Delete, Get, Param, Post, Put, UseGuards} from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+  UploadedFile,
+  UseGuards,
+  UseInterceptors
+} from '@nestjs/common';
 import {JwtAuthGuard} from "../auth/jwt-auth.guard";
 import {ProductsService} from "./products.service";
 import {CreateProductDto} from "../dtos/products-create.dto";
@@ -7,6 +18,7 @@ import {Roles} from "../decorators/roles.decorator";
 import {RolesGuard} from "../guards/auth.guard";
 import {UpdateProductQteDto} from "../dtos/product-update-qte.dto";
 import {HoldProductDto} from "../dtos/product-hold.dto";
+import {FileInterceptor} from "@nestjs/platform-express";
 
 // All elements after /products are protected with JwtAuthGuard
 @ApiBearerAuth()
@@ -63,6 +75,22 @@ export class ProductsController {
   @Delete('/remove/:id')
   async deleteProduct(@Param('id') id) {
     return this.productsService.removeProduct(id);
+  }
+
+  @ApiOperation({summary: 'Upload a bottle image to the back end'})
+  @Post('/uploadBottleImg')
+  @UseInterceptors(FileInterceptor('file'))
+  uploadBottle(@UploadedFile() file) {
+    console.log(file);
+    return this.productsService.uploadBottleImg();
+  }
+
+  @ApiOperation({summary: 'Upload a label image to the back end'})
+  @Post('/uploadLabelImg')
+  @UseInterceptors(FileInterceptor('file'))
+  uploadLabel(@UploadedFile() file) {
+    console.log(file);
+    return this.productsService.uploadLabelImg();
   }
 
 }

@@ -70,4 +70,13 @@ export class ProductsService {
   async removeProduct(id: string) {
     return this.productModel.findByIdAndDelete(id);
   }
+
+  async uploadBottleImg() {
+
+  }
+
+  async uploadLabelImg() {
+
+  }
+
 }
