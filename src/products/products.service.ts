@@ -73,12 +73,12 @@ export class ProductsService {
     return this.productModel.findByIdAndDelete(id);
   }
 
-  async uploadBottleImg(id: string, UpdateProductPictureDto: UpdateProductPictureDto) {
-    return this.productModel.findByIdAndUpdate(id, UpdateProductPictureDto);
+  async uploadBottleImg(id: string, updateProductPictureDto: UpdateProductPictureDto) {
+    return this.productModel.findByIdAndUpdate(id, updateProductPictureDto);
   }
 
-  async uploadLabelImg(id: string, UpdateProductLabelDto: UpdateProductLabelDto) {
-    return this.productModel.findByIdAndUpdate(id, UpdateProductLabelDto);
+  async uploadLabelImg(id: string, updateProductLabelDto: UpdateProductLabelDto) {
+    return this.productModel.findByIdAndUpdate(id, updateProductLabelDto);
   }
 
 }
