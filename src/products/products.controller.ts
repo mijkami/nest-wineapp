@@ -86,7 +86,7 @@ export class ProductsController {
       destination: './public/images/bottleImg'
       ,  filename: function (req, file, cb) {
         let filetype = (file.mimetype).split('/')[1]
-        cb(null, file.fieldname + '-' + Date.now()+ '.' + filetype)
+        cb(null, file.fieldname + '-' + Date.now())
       }
     })
   }))
@@ -105,7 +105,7 @@ export class ProductsController {
       destination: './public/images/labelImg'
       ,  filename: function (req, file, cb) {
         let filetype = (file.mimetype).split('/')[1]
-        cb(null, file.fieldname + '-' + Date.now()+ '.' + filetype)
+        cb(null, file.fieldname + '-' + Date.now())
       }
     })
   }))
