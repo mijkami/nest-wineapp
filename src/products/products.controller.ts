@@ -84,16 +84,20 @@ export class ProductsController {
   @UseInterceptors(FileInterceptor('file', { dest: './bottleImg' }))
   uploadBottle(@UploadedFile() file, @Param('id') id: string, ) {
     console.log(file);
+    console.log(file.path);
     @Put();
-    
+    //TODO
 
-    return this.productsService.uploadBottleImg(id, file.path, UpdateProductPicture);
+    return this.productsService.uploadBottleImg(id, UpdateProductPicture);
   }
   @ApiOperation({summary: 'Upload a label image to the back end'})
   @Post('/uploadLabelImg')
   @UseInterceptors(FileInterceptor('file', { dest: './labelImg' }))
   uploadLabel(@UploadedFile() file, @Param('id') id: string, @Body() UpdateProductLabel : UpdateProductLabelDto) {
     console.log(file);
-    return this.productsService.uploadLabelImg(id, file.path, UpdateProductLabel);
+    console.log(file.path);
+    //TODO
+
+    return this.productsService.uploadLabelImg(id, UpdateProductLabel);
   }
 }
