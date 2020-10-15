@@ -74,14 +74,10 @@ export class ProductsService {
   }
 
   async uploadBottleImg(id: string, UpdateProductPictureDto: UpdateProductPictureDto) {
-    //TODO
-
     return this.productModel.findByIdAndUpdate(id, UpdateProductPictureDto);
   }
 
   async uploadLabelImg(id: string, UpdateProductLabelDto: UpdateProductLabelDto) {
-    //TODO 
-
     return this.productModel.findByIdAndUpdate(id, UpdateProductLabelDto);
   }
 
