@@ -79,12 +79,12 @@ export class ProductsController {
 
   @ApiOperation({summary: 'Upload a bottle image to the back end'})
   @Post('/uploadBottleImg/:id')
-  @UseInterceptors(FileInterceptor('file', { dest: './public/bottleImg' }))
+  @UseInterceptors(FileInterceptor('file', { dest: './public/images/bottleImg' }))
   uploadBottle(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
-    console.log(file.path);
+    console.log(file.filename);
     let filetype = (file.mimetype).split('/')[1]
-    let fullfilepath = {product_img: "/" + file.path + "." + filetype}
+    let fullfilepath = {product_img: "/" + file.filename + "." + filetype}
     return this.productsService.uploadBottleImg(id, fullfilepath);
   }
   @ApiOperation({summary: 'Upload a label image to the back end'})
@@ -92,9 +92,9 @@ export class ProductsController {
   @UseInterceptors(FileInterceptor('file', { dest: './labelImg' }))
   uploadLabel(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
-    console.log(file.path);
+    console.log(file.filename);
     let filetype = (file.mimetype).split('/')[1]
-    let fullfilepath = {label_img: "/" + file.path + "." + filetype}
+    let fullfilepath = {label_img: "/" + file.filename + "." + filetype}
     return this.productsService.uploadLabelImg(id, fullfilepath);
   }
 }
