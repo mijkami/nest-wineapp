@@ -83,8 +83,8 @@ export class ProductsController {
   uploadBottle(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
     console.log(file.path);
-    let filetype = (file.mime).split('/')[1]
-    let fullfilepath = {product_img: file.path + "." + filetype}
+    let filetype = (file.mimetype).split('/')[1]
+    let fullfilepath = {product_img: "/" + file.path + "." + filetype}
     return this.productsService.uploadBottleImg(id, fullfilepath);
   }
   @ApiOperation({summary: 'Upload a label image to the back end'})
@@ -93,8 +93,8 @@ export class ProductsController {
   uploadLabel(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
     console.log(file.path);
-    let filetype = (file.mime).split('/')[1]
-    let fullfilepath = {label_img: file.path + "." + filetype}
+    let filetype = (file.mimetype).split('/')[1]
+    let fullfilepath = {label_img: "/" + file.path + "." + filetype}
     return this.productsService.uploadLabelImg(id, fullfilepath);
   }
 }
