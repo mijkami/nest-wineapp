@@ -6,7 +6,7 @@ import {ProductsInterface} from "../interfaces/products.interface";
 import {Model} from "mongoose";
 import {UpdateProductQteDto} from "../dtos/product-update-qte.dto";
 import {HoldProductDto} from "../dtos/product-hold.dto";
-import {UpdateProductSlugDto} from "../dtos/product-update-slug.dto";
+import {UpdateProductPictureDto} from "../dtos/product-update-picture.dto";
 import {UpdateProductLabelDto} from "../dtos/product-update-label.dto";
 
 @Injectable()
@@ -73,10 +73,10 @@ export class ProductsService {
     return this.productModel.findByIdAndDelete(id);
   }
 
-  async uploadBottleImg(id: string, UpdateProductSlugDto: UpdateProductSlugDto) {
+  async uploadBottleImg(id: string, UpdateProductPictureDto: UpdateProductPictureDto) {
     //TODO
 
-    return this.productModel.findByIdAndUpdate(id, UpdateProductSlugDto);
+    return this.productModel.findByIdAndUpdate(id, UpdateProductPictureDto);
   }
 
   async uploadLabelImg(id: string, UpdateProductLabelDto: UpdateProductLabelDto) {

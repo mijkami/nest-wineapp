@@ -19,6 +19,8 @@ import {RolesGuard} from "../guards/auth.guard";
 import {UpdateProductQteDto} from "../dtos/product-update-qte.dto";
 import {HoldProductDto} from "../dtos/product-hold.dto";
 import {FileInterceptor} from "@nestjs/platform-express";
+import { UpdateProductLabelDto } from 'src/dtos/product-update-label.dto';
+import { UpdateProductPictureDto } from 'src/dtos/product-update-picture.dto';
 
 // All elements after /products are protected with JwtAuthGuard
 @ApiBearerAuth()
@@ -80,16 +82,16 @@ export class ProductsController {
   @ApiOperation({summary: 'Upload a bottle image to the back end'})
   @Post('/uploadBottleImg')
   @UseInterceptors(FileInterceptor('file', { dest: './bottleImg' }))
-  uploadBottle(@UploadedFile() file) {
+  uploadBottle(@UploadedFile() file, @Param('id') id: string, @Body() UpdateProductPicture : UpdateProductPictureDto) {
     console.log(file);
-    return this.productsService.uploadBottleImg();
+    return this.productsService.uploadBottleImg(id, UpdateProductPicture);
   }
 
   @ApiOperation({summary: 'Upload a label image to the back end'})
   @Post('/uploadLabelImg')
   @UseInterceptors(FileInterceptor('file', { dest: './labelImg' }))
-  uploadLabel(@UploadedFile() file) {
+  uploadLabel(@UploadedFile() file, @Param('id') id: string, @Body() UpdateProductLabel : UpdateProductLabelDto) {
     console.log(file);
-    return this.productsService.uploadLabelImg();
+    return this.productsService.uploadLabelImg(id, UpdateProductLabel);
   }
 }

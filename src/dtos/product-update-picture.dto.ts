@@ -1,6 +1,6 @@
 import {ApiProperty} from "@nestjs/swagger";
 
-export class UpdateProductSlugDto {
+export class UpdateProductPictureDto {
 
   @ApiProperty()
   readonly product_img : string;
