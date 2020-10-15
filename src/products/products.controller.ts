@@ -89,7 +89,7 @@ export class ProductsController {
   }
   @ApiOperation({summary: 'Upload a label image to the back end'})
   @Post('/uploadLabelImg/:id')
-  @UseInterceptors(FileInterceptor('file', { dest: './labelImg' }))
+  @UseInterceptors(FileInterceptor('file', { dest: './public/images/labelImg' }))
   uploadLabel(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
     console.log(file.filename);
