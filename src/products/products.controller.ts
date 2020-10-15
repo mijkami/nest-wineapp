@@ -80,16 +80,17 @@ export class ProductsController {
   }
 
   @ApiOperation({summary: 'Upload a bottle image to the back end'})
-  @Post('/uploadBottleImg/:id')
+  @Post('/uploadBottleImg')
   @UseInterceptors(FileInterceptor('file', { dest: './bottleImg' }))
-  uploadBottle(@UploadedFile() file, @Param('id') id: string) {
+  uploadBottle(@UploadedFile() file, @Param('id') id: string, ) {
     console.log(file);
-    @Put()
+    @Put();
     
 
     return this.productsService.uploadBottleImg(id, file.path, UpdateProductPicture);
-    @ApiOperation({summary: 'Upload a label image to the back end'})
-  @Post('/uploadLabelImg/:id')
+  }
+  @ApiOperation({summary: 'Upload a label image to the back end'})
+  @Post('/uploadLabelImg')
   @UseInterceptors(FileInterceptor('file', { dest: './labelImg' }))
   uploadLabel(@UploadedFile() file, @Param('id') id: string, @Body() UpdateProductLabel : UpdateProductLabelDto) {
     console.log(file);
