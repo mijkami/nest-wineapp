@@ -18,7 +18,7 @@ import {Roles} from "../decorators/roles.decorator";
 import {RolesGuard} from "../guards/auth.guard";
 import {UpdateProductQteDto} from "../dtos/product-update-qte.dto";
 import {HoldProductDto} from "../dtos/product-hold.dto";
-import {FileInterceptor} from "@nestjs/platform-express";
+import {FileFieldsInterceptor, FileInterceptor} from "@nestjs/platform-express";
 
 // All elements after /products are protected with JwtAuthGuard
 @ApiBearerAuth()
@@ -80,7 +80,15 @@ export class ProductsController {
 
   @ApiOperation({summary: 'Upload a bottle image to the back end'})
   @Post('/uploadBottleImg/:id')
-  @UseInterceptors(FileInterceptor('file', { dest: './public/images/bottleImg', preservePath: true }))
+  @UseInterceptors(FileInterceptor('file', {
+    storage:({
+      destination: './public/images/bottleImg'
+      ,  filename: function (req, file, cb) {
+        let filetype = (file.mimetype).split('/')[1]
+        cb(null, file.fieldname + '-' + Date.now()+ '.' + filetype)
+      }
+    })
+  }))
   uploadBottle(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
     console.log(file.filename);
@@ -88,9 +96,18 @@ export class ProductsController {
     let fullfilepath = {product_img: "/" + file.filename + "." + filetype}
     return this.productsService.uploadBottleImg(id, fullfilepath);
   }
+  
   @ApiOperation({summary: 'Upload a label image to the back end'})
   @Post('/uploadLabelImg/:id')
-  @UseInterceptors(FileInterceptor('file', { dest: './public/images/labelImg', preservePath: true }))
+  @UseInterceptors(FileInterceptor('file', {
+    storage:({
+      destination: './public/images/labelImg'
+      ,  filename: function (req, file, cb) {
+        let filetype = (file.mimetype).split('/')[1]
+        cb(null, file.fieldname + '-' + Date.now()+ '.' + filetype)
+      }
+    })
+  }))
   uploadLabel(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
     console.log(file.filename);
