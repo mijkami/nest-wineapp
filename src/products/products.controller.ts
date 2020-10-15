@@ -77,9 +77,10 @@ export class ProductsController {
     return this.productsService.removeProduct(id);
   }
 
+
   @ApiOperation({summary: 'Upload a bottle image to the back end'})
   @Post('/uploadBottleImg/:id')
-  @UseInterceptors(FileInterceptor('file', { dest: './public/images/bottleImg' }))
+  @UseInterceptors(FileInterceptor('file', { dest: './public/images/bottleImg', preservePath: true }))
   uploadBottle(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
     console.log(file.filename);
@@ -89,7 +90,7 @@ export class ProductsController {
   }
   @ApiOperation({summary: 'Upload a label image to the back end'})
   @Post('/uploadLabelImg/:id')
-  @UseInterceptors(FileInterceptor('file', { dest: './public/images/labelImg' }))
+  @UseInterceptors(FileInterceptor('file', { dest: './public/images/labelImg', preservePath: true }))
   uploadLabel(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
     console.log(file.filename);
