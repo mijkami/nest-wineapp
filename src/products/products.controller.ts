@@ -79,7 +79,7 @@ export class ProductsController {
 
   @ApiOperation({summary: 'Upload a bottle image to the back end'})
   @Post('/uploadBottleImg/:id')
-  @UseInterceptors(FileInterceptor('file', { dest: './bottleImg' }))
+  @UseInterceptors(FileInterceptor('file', { dest: './public/bottleImg' }))
   uploadBottle(@UploadedFile() file, @Param('id') id: string) {
     console.log(file);
     console.log(file.path);
