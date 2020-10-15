@@ -86,15 +86,12 @@ export class ProductsController {
       destination: './public/images/bottleImg'
       ,  filename: function (req, file, cb) {
         let filetype = (file.mimetype).split('/')[1]
-        cb(null, file.fieldname + '-' + Date.now())
+        cb(null, file.fieldname + '-' + Date.now()+ '.' + filetype)
       }
     })
   }))
   uploadBottle(@UploadedFile() file, @Param('id') id: string) {
-    console.log(file);
-    console.log(file.filename);
-    let filetype = (file.mimetype).split('/')[1]
-    let fullfilepath = {product_img: "/" + file.filename + "." + filetype}
+    let fullfilepath = {product_img: "/" + file.filename}
     return this.productsService.uploadBottleImg(id, fullfilepath);
   }
 
@@ -105,15 +102,12 @@ export class ProductsController {
       destination: './public/images/labelImg'
       ,  filename: function (req, file, cb) {
         let filetype = (file.mimetype).split('/')[1]
-        cb(null, file.fieldname + '-' + Date.now())
+        cb(null, file.fieldname + '-' + Date.now()+ '.' + filetype)
       }
     })
   }))
   uploadLabel(@UploadedFile() file, @Param('id') id: string) {
-    console.log(file);
-    console.log(file.filename);
-    let filetype = (file.mimetype).split('/')[1]
-    let fullfilepath = {label_img: "/" + file.filename + "." + filetype}
+    let fullfilepath = {label_img: "/" + file.filename}
     return this.productsService.uploadLabelImg(id, fullfilepath);
   }
 }
