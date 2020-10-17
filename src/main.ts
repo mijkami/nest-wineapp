@@ -15,6 +15,7 @@ async function bootstrap() {
 
   app.enableCors();
   app.useStaticAssets(join(__dirname, '..', 'public'));
+  app.setViewEngine('hbs');
 
   const options = new DocumentBuilder()
     .setTitle('WineApp REST API')
