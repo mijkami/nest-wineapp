@@ -6,6 +6,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
 import { ConfigModule } from "@nestjs/config";
+import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 
 
@@ -16,6 +17,9 @@ import { join } from 'path';
     AuthModule,
     UsersModule,
     ProductsModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'apidocs'),
+    }),
   ],
   controllers: [AppController],
   providers: [AppService]})
