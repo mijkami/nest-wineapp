@@ -17,7 +17,7 @@ async function bootstrap() {
         .addTag('WineApp')
         .build();
     const document = swagger_1.SwaggerModule.createDocument(app, options);
-    swagger_1.SwaggerModule.setup('api/docs', app, document);
+    swagger_1.SwaggerModule.setup('api', app, document);
     await app.listen(3000);
 }
 bootstrap();
