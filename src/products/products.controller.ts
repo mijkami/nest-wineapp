@@ -1,4 +1,15 @@
-import {Body, Controller, Delete, Get, Param, Post, Put, UseGuards} from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+  UploadedFile,
+  UseGuards,
+  UseInterceptors
+} from '@nestjs/common';
 import {JwtAuthGuard} from "../auth/jwt-auth.guard";
 import {ProductsService} from "./products.service";
 import {CreateProductDto} from "../dtos/products-create.dto";
@@ -7,6 +18,8 @@ import {Roles} from "../decorators/roles.decorator";
 import {RolesGuard} from "../guards/auth.guard";
 import {UpdateProductQteDto} from "../dtos/product-update-qte.dto";
 import {HoldProductDto} from "../dtos/product-hold.dto";
+import {FileFieldsInterceptor, FileInterceptor} from "@nestjs/platform-express";
+import { diskStorage } from 'multer';
 
 // All elements after /products are protected with JwtAuthGuard
 @ApiBearerAuth()
@@ -65,4 +78,36 @@ export class ProductsController {
     return this.productsService.removeProduct(id);
   }
 
+
+  @ApiOperation({summary: 'Upload a bottle image to the back end'})
+  @Post('/uploadBottleImg/:id')
+  @UseInterceptors(FileInterceptor('file', {
+    storage: diskStorage({
+      destination: './public/images/bottleImg'
+      ,  filename: function (req, file, cb) {
+        let filetype = (file.mimetype).split('/')[1]
+        cb(null, file.fieldname + '-' + Date.now()+ '.' + filetype)
+      }
+    })
+  }))
+  uploadBottle(@UploadedFile() file, @Param('id') id: string) {
+    let fullfilepath = {product_img: "/" + file.filename}
+    return this.productsService.uploadBottleImg(id, fullfilepath);
+  }
+
+  @ApiOperation({summary: 'Upload a label image to the back end'})
+  @Post('/uploadLabelImg/:id')
+  @UseInterceptors(FileInterceptor('file', {
+    storage: diskStorage({
+      destination: './public/images/labelImg'
+      ,  filename: function (req, file, cb) {
+        let filetype = (file.mimetype).split('/')[1]
+        cb(null, file.fieldname + '-' + Date.now()+ '.' + filetype)
+      }
+    })
+  }))
+  uploadLabel(@UploadedFile() file, @Param('id') id: string) {
+    let fullfilepath = {label_img: "/" + file.filename}
+    return this.productsService.uploadLabelImg(id, fullfilepath);
+  }
 }
